@@ -1,0 +1,43 @@
+2021/05/22 14:50:07 init 1
+2021/05/22 14:50:07 init 1
+2021/05/22 14:50:07 init 1
+Test (2B): basic agreement ...
+2021/05/22 14:50:07 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:07 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 leader 1 len2
+2021/05/22 14:50:08 recv msg : raft-1 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-1 msg-200 index-2
+2021/05/22 14:50:08 leader 1 len3
+2021/05/22 14:50:08 recv msg : raft-2 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-2 msg-200 index-2
+2021/05/22 14:50:08 recv msg : raft-0 msg-100 index-1
+2021/05/22 14:50:08 recv msg : raft-0 msg-200 index-2
+2021/05/22 14:50:08 leader 1 len4
+2021/05/22 14:50:08 recv msg : raft-1 msg-300 index-3
+2021/05/22 14:50:08 recv msg : raft-2 msg-300 index-3
+2021/05/22 14:50:08 recv msg : raft-0 msg-300 index-3
+  ... Passed --   0.6  3    8    1930    3
+PASS
+ok  	_/Users/yszhou/Projects/6.824/src/raft	1.166s

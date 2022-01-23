@@ -1,0 +1,36 @@
+Test (2A): election after network failure ...
+2021/05/16 16:06:27 [follower-0 term-0] running
+2021/05/16 16:06:27 [follower-2 term-0] running
+2021/05/16 16:06:27 [follower-1 term-0] running
+2021/05/16 16:06:27 [candidate-0 term-1] start election
+2021/05/16 16:06:27 [candidate-0 term-1] win vote from follower-1, already win 2 votes
+2021/05/16 16:06:27 [candidate-0 term-1] win vote from follower-2, already win 3 votes
+2021/05/16 16:06:27 [candidate-0 term-1] become leader
+2021/05/16 16:06:27 [leader-0 term-1] running
+2021/05/16 16:06:27 [leader-0 term-1] heartbeat to follower-1, success
+2021/05/16 16:06:27 [leader-0 term-1] heartbeat to follower-2, success
+2021/05/16 16:06:28 [candidate-1 term-2] start election
+2021/05/16 16:06:28 [leader-0 term-1] heartbeat to follower-1 curTerm-2 failed, become follower-0 term-2
+2021/05/16 16:06:28 [candidate-1 term-2] win vote from follower-2, already win 2 votes
+2021/05/16 16:06:28 [candidate-1 term-2] become leader
+2021/05/16 16:06:28 [leader-1 term-2] running
+2021/05/16 16:06:28 [leader-1 term-2] heartbeat to follower-0, success
+2021/05/16 16:06:28 [leader-1 term-2] heartbeat to follower-2, success
+2021/05/16 16:06:28 *** check one leader success 1 ***
+2021/05/16 16:06:28 [follower-0 term-2] running
+2021/05/16 16:06:28 [candidate-0 term-3] start election
+2021/05/16 16:06:28 [candidate-2 term-3] start election
+2021/05/16 16:06:28 [candidate-2 term-3] lose vote from follower-0
+2021/05/16 16:06:29 [candidate-0 term-3] request vote from 1 failed, network failed
+2021/05/16 16:06:29 [candidate-0 term-3] lose vote from follower-2
+2021/05/16 16:06:29 [candidate-0 term-3] has 1 votes, vote split
+2021/05/16 16:06:29 [candidate-0 term-4] start election
+2021/05/16 16:06:32 [candidate-2 term-3] request vote from 1 failed, network failed
+2021/05/16 16:06:32 [candidate-2 term-3] has 1 votes, vote split
+2021/05/16 16:06:32 [candidate-2 term-4] start election
+2021/05/16 16:06:32 [candidate-2 term-4] lose vote from follower-0
+--- FAIL: TestReElection2A (5.49s)
+    config.go:348: expected one leader, got none
+FAIL
+exit status 1
+FAIL	_/Users/yszhou/Projects/6.824/src/raft	5.676s

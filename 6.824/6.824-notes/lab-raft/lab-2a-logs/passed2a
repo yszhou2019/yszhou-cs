@@ -1,0 +1,198 @@
+Test (2A): initial election ...
+2021/05/17 13:40:31 [follower-0 term-0] become candidate
+2021/05/17 13:40:31 [candidate-0 term-1] win 2 votes, become leader
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:31 *** check one leader success 0 ***
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:31 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:32 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:33 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:34 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:34 *** check one leader success 0 ***
+  ... Passed --   3.6  3   60   14816    0
+Test (2A): election after network failure ...
+2021/05/17 13:40:34 [follower-1 term-1] become candidate
+2021/05/17 13:40:35 [follower-2 term-1] become candidate
+2021/05/17 13:40:35 [follower-0 term-0] become candidate
+2021/05/17 13:40:35 [candidate-0 term-1] win 2 votes, become leader
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 2, success
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 1, success
+2021/05/17 13:40:35 *** check one leader success 0 ***
+2021/05/17 13:40:35 [candidate-1 term-2] win 1 votes, vote split, start next election
+2021/05/17 13:40:35 [follower-1 term-1] become candidate
+2021/05/17 13:40:35 [candidate-1 term-2] win 2 votes, become leader
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 2, network failed
+2021/05/17 13:40:35 [candidate-2 term-2] win 1 votes, vote split, start next election
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 1, network failed
+2021/05/17 13:40:35 [leader-1 term-2] heartbeat 2, success
+2021/05/17 13:40:35 *** check one leader success 1 ***
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 1, network failed
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 2, network failed
+2021/05/17 13:40:35 [leader-0 term-1] heartbeat 1, failed, become follower
+2021/05/17 13:40:35 [leader-1 term-2] heartbeat 2, success
+2021/05/17 13:40:35 [leader-1 term-2] heartbeat 0, success
+2021/05/17 13:40:35 [leader-0 term-2] heartbeat 1, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, success
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, success
+2021/05/17 13:40:36 [leader-0 term-2] heartbeat 2, network failed
+2021/05/17 13:40:36 [leader-0 term-2] heartbeat 1, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, success
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, success
+2021/05/17 13:40:36 [leader-0 term-2] heartbeat 1, network failed
+2021/05/17 13:40:36 [leader-0 term-2] heartbeat 2, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, success
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, success
+2021/05/17 13:40:36 [candidate-1 term-3] win 1 votes, vote split, start next election
+2021/05/17 13:40:36 *** check one leader success 1 ***
+2021/05/17 13:40:36 [candidate-2 term-3] win 1 votes, vote split, start next election
+2021/05/17 13:40:36 [follower-0 term-2] become candidate
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:36 [candidate-1 term-4] win 1 votes, vote split, start next election
+2021/05/17 13:40:36 [follower-2 term-2] become candidate
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:36 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [candidate-0 term-3] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [candidate-2 term-4] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [candidate-1 term-5] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [candidate-2 term-3] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [candidate-0 term-4] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [candidate-2 term-5] win 1 votes, vote split, start next election
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:37 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [candidate-0 term-5] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [candidate-1 term-6] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [candidate-2 term-6] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [candidate-2 term-4] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [candidate-0 term-6] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [candidate-0 term-7] win 2 votes, become leader
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [candidate-1 term-7] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-2] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 *** check one leader success 0 ***
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [leader-1 term-7] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-1 term-7] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [candidate-2 term-7] win 1 votes, vote split, start next election
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:38 [leader-1 term-7] heartbeat 0, network failed
+2021/05/17 13:40:38 [leader-1 term-7] heartbeat 2, network failed
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:38 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-1 term-7] heartbeat 2, network failed
+2021/05/17 13:40:39 [leader-1 term-7] heartbeat 0, network failed
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, network failed
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, network failed
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-1 term-7] heartbeat 2, network failed
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, network failed
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 1, success
+2021/05/17 13:40:39 [leader-0 term-7] heartbeat 2, success
+2021/05/17 13:40:39 *** check one leader success 0 ***
+  ... Passed --   4.9  3  122   23862    0
+PASS
+ok  	_/Users/yszhou/Projects/6.824/src/raft	8.576s

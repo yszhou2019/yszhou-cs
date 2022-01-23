@@ -1,0 +1,26 @@
+Test (2A): election after network failure ...
+2021/05/16 17:23:07 [follower-0 term-0] running
+2021/05/16 17:23:07 [follower-1 term-0] running
+2021/05/16 17:23:07 [follower-2 term-0] running
+2021/05/16 17:23:08 [candidate-2 term-1] start election
+2021/05/16 17:23:08 [candidate-2 term-1] win vote from follower-0, already win 2 votes
+2021/05/16 17:23:08 [candidate-2 term-1] win vote from follower-1, already win 3 votes
+2021/05/16 17:23:08 [candidate-2 term-1] become leader
+2021/05/16 17:23:08 [leader-2 term-1] running
+2021/05/16 17:23:08 [leader-2 term-1] heartbeat to follower-0, success
+2021/05/16 17:23:08 [leader-2 term-1] heartbeat to follower-1, success
+2021/05/16 17:23:08 *** check one leader success 2 ***
+2021/05/16 17:23:08 [candidate-0 term-2] start election
+2021/05/16 17:23:08 [candidate-0 term-2] win vote from follower-1, already win 2 votes
+2021/05/16 17:23:09 [candidate-1 term-3] start election
+2021/05/16 17:23:11 [candidate-0 term-2] request vote from 2 failed, network failed
+2021/05/16 17:23:11 [candidate-0 term-2] become leader
+2021/05/16 17:23:11 [leader-0 term-2] running
+2021/05/16 17:23:11 [leader-0 term-2] heartbeat to follower-1 curTerm-3 failed, become follower-0 term-3
+2021/05/16 17:23:11 [follower-0 term-3] running
+2021/05/16 17:23:11 [candidate-0 term-4] start election
+--- FAIL: TestReElection2A (5.68s)
+    config.go:348: expected one leader, got none
+FAIL
+exit status 1
+FAIL	_/Users/yszhou/Projects/6.824/src/raft	6.175s

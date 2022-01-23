@@ -1,0 +1,249 @@
+2021/05/25 21:12:36 init 1
+2021/05/25 21:12:36 init 1
+2021/05/25 21:12:36 init 1
+2021/05/25 21:12:37 [follower-0 term-0] become candidate
+2021/05/25 21:12:37 raft-1 给raft-0 投票，自己的lastTerm-0 ，候选者的lastTerm-0
+2021/05/25 21:12:37 raft-2 给raft-0 投票，自己的lastTerm-0 ，候选者的lastTerm-0
+2021/05/25 21:12:37 [candidate-0 term-1] win 2 votes, become leader
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试创建sync-1()
+2021/05/25 21:12:37 leader-0 尝试创建sync-2()
+2021/05/25 21:12:37 leader-0 len2 recv com-101
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 raft-2 接收到leader-0的信息，cmd 是101
+2021/05/25 21:12:37 raft-2 进行reply
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-1] append len-1
+2021/05/25 21:12:37 leader-0 update raft-2 next from 1 to 2, should be 2
+2021/05/25 21:12:37 raft-1 接收到leader-0的信息，cmd 是101
+2021/05/25 21:12:37 raft-1 进行reply
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-1] append len-1
+2021/05/25 21:12:37 leader-0 update raft-1 next from 1 to 2, should be 2
+2021/05/25 21:12:37 leader-0 提交成功，commitIdx=1
+2021/05/25 21:12:37 raft-0 msg-101 index-1 apply成功
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 raft-2 进行reply
+2021/05/25 21:12:37 raft-2 msg-101 index-1 apply成功
+2021/05/25 21:12:37 raft-1 msg-101 index-1 apply成功
+2021/05/25 21:12:37 raft-1 进行reply
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-2 next from 2 to 2, should be 2
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-1 next from 2 to 2, should be 2
+2021/05/25 21:12:37 check cmd-101 success
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 raft-2 进行reply
+2021/05/25 21:12:37 raft-1 进行reply
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-2 next from 2 to 2, should be 2
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-1 next from 2 to 2, should be 2
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 raft-1 进行reply
+2021/05/25 21:12:37 raft-2 进行reply
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-1 next from 2 to 2, should be 2
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-2 next from 2 to 2, should be 2
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 raft-1 进行reply
+2021/05/25 21:12:37 raft-2 进行reply
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] append len-0
+2021/05/25 21:12:37 leader-0 update raft-2 next from 2 to 2, should be 2
+2021/05/25 21:12:37 leader-0 update raft-1 next from 2 to 2, should be 2
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:37 ===========disconnect leader raft-0===============
+2021/05/25 21:12:37 leader-0 len3 recv com-102
+2021/05/25 21:12:37 leader-0 len4 recv com-103
+2021/05/25 21:12:37 leader-0 len5 recv com-104
+2021/05/25 21:12:37 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:37 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 [follower-1 term-1] become candidate
+2021/05/25 21:12:38 raft-2 给raft-1 投票，自己的lastTerm-1 ，候选者的lastTerm-1
+2021/05/25 21:12:38 [candidate-1 term-2] win 2 votes, become leader
+2021/05/25 21:12:38 leader-1 heart beating...
+2021/05/25 21:12:38 leader-1 尝试创建sync-0()
+2021/05/25 21:12:38 leader-1 尝试创建sync-2()
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-1 len3 recv com-103
+2021/05/25 21:12:38 leader-1 heart beating...
+2021/05/25 21:12:38 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:38 raft-2 进行reply
+2021/05/25 21:12:38 [leader-1 term-2 loglen-3, to raft-2 term-2 prevIdx-1] append len-2
+2021/05/25 21:12:38 leader-1 update raft-2 next from 1 to 3, should be 3
+2021/05/25 21:12:38 leader-1 提交成功，commitIdx=2
+2021/05/25 21:12:38 leader-1 尝试向raft-0 发送消息
+2021/05/25 21:12:38 raft-1 msg-103 index-2 apply成功
+2021/05/25 21:12:38 leader-1 heart beating...
+2021/05/25 21:12:38 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:38 raft-2 进行reply
+2021/05/25 21:12:38 [leader-1 term-2 loglen-3, to raft-2 term-2 prevIdx-3] append len-0
+2021/05/25 21:12:38 leader-1 update raft-2 next from 3 to 3, should be 3
+2021/05/25 21:12:38 raft-2 msg-103 index-2 apply成功
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 check cmd-103 success
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 append raft-1 len-0 timeout 
+2021/05/25 21:12:38 leader-0 append raft-2 len-3 timeout 
+2021/05/25 21:12:38 leader-1 heart beating...
+2021/05/25 21:12:38 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:38 raft-2 进行reply
+2021/05/25 21:12:38 [leader-1 term-2 loglen-3, to raft-2 term-2 prevIdx-3] append len-0
+2021/05/25 21:12:38 leader-1 update raft-2 next from 3 to 3, should be 3
+2021/05/25 21:12:38 leader-1 heart beating...
+2021/05/25 21:12:38 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:38 raft-2 进行reply
+2021/05/25 21:12:38 [leader-1 term-2 loglen-3, to raft-2 term-2 prevIdx-3] append len-0
+2021/05/25 21:12:38 leader-1 update raft-2 next from 3 to 3, should be 3
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:38 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:38 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:38 leader-0 heart beating...
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 raft-2 进行reply
+2021/05/25 21:12:39 [leader-1 term-2 loglen-3, to raft-2 term-2 prevIdx-3] append len-0
+2021/05/25 21:12:39 leader-1 update raft-2 next from 3 to 3, should be 3
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 ===========disconnect leader raft-1===============
+2021/05/25 21:12:39 ==============恢复连接leader raft-0 ===============
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-0 len6 recv com-104
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-1 append raft-0 len-2 timeout 
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-1 尝试向raft-0 发送消息
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:39 leader-0 append raft-2 len-3 timeout 
+2021/05/25 21:12:39 leader-0 append raft-1 len-3 timeout 
+2021/05/25 21:12:39 [follower-2 term-2] become candidate
+2021/05/25 21:12:39 leader-0 heart beating...
+2021/05/25 21:12:39 raft-0 身份从leader转换成3，即将退出heartBeat()函数
+2021/05/25 21:12:39 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:39 raft-0 给raft-2 投票，自己的lastTerm-1 ，候选者的lastTerm-2
+2021/05/25 21:12:39 [candidate-2 term-3] win 2 votes, become leader
+2021/05/25 21:12:39 leader-2 heart beating...
+2021/05/25 21:12:39 leader-2 尝试创建sync-0()
+2021/05/25 21:12:39 leader-2 尝试创建sync-1()
+2021/05/25 21:12:39 raft-2 进行reply
+2021/05/25 21:12:39 raft-2 身份从leader转换成3，退出sync-1 函数
+2021/05/25 21:12:39 raft-2 身份从leader转换成3，即将退出leaderCommit()函数
+2021/05/25 21:12:39 raft-2 身份从leader转换成3，退出sync-0 函数
+2021/05/25 21:12:39 [leader-0 term-3 loglen-6, to raft-2 term-3 prevIdx-2] append len-4
+2021/05/25 21:12:39 leader-0 update raft-2 next from 2 to 6, should be 6
+2021/05/25 21:12:39 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:39 raft-0 身份从leader转换成3，退出sync-2 函数
+2021/05/25 21:12:39 raft-0 身份从leader转换成3，即将退出leaderCommit()函数
+2021/05/25 21:12:39 leader-1 heart beating...
+2021/05/25 21:12:40 raft-2 身份从leader转换成3，即将退出heartBeat()函数
+2021/05/25 21:12:40 leader-1 append raft-2 len-0 timeout 
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 尝试向raft-2 发送消息
+2021/05/25 21:12:40 [follower-0 term-3] become candidate
+2021/05/25 21:12:40 raft-2 给raft-0 投票，自己的lastTerm-1 ，候选者的lastTerm-1
+2021/05/25 21:12:40 [candidate-0 term-4] win 2 votes, become leader
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试创建sync-1()
+2021/05/25 21:12:40 leader-0 尝试创建sync-2()
+2021/05/25 21:12:40 leader-0 sync-1() 已经存在，准备退出
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:40 raft-2 进行reply
+2021/05/25 21:12:40 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:40 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:40 raft-2 进行reply
+2021/05/25 21:12:40 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:40 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:40 leader-1 append raft-0 len-2 timeout 
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:40 raft-2 进行reply
+2021/05/25 21:12:40 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:40 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 尝试向raft-0 发送消息
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:40 raft-2 进行reply
+2021/05/25 21:12:40 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:40 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-1 heart beating...
+2021/05/25 21:12:40 leader-0 heart beating...
+2021/05/25 21:12:40 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:40 raft-2 进行reply
+2021/05/25 21:12:40 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:40 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:40 leader-0 append raft-1 len-4 timeout 
+2021/05/25 21:12:41 leader-0 heart beating...
+2021/05/25 21:12:41 leader-0 尝试向raft-1 发送消息
+2021/05/25 21:12:41 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:41 raft-2 进行reply
+2021/05/25 21:12:41 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:41 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:41 leader-0 heart beating...
+2021/05/25 21:12:41 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:41 raft-2 进行reply
+2021/05/25 21:12:41 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:41 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:41 leader-0 heart beating...
+2021/05/25 21:12:41 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:41 raft-2 进行reply
+2021/05/25 21:12:41 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:41 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:41 leader-1 heart beating...
+2021/05/25 21:12:41 leader-1 heart beating...
+2021/05/25 21:12:41 leader-1 heart beating...
+2021/05/25 21:12:41 leader-1 append raft-2 len-0 timeout 
+2021/05/25 21:12:41 leader-0 heart beating...
+2021/05/25 21:12:41 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:41 raft-2 进行reply
+2021/05/25 21:12:41 [leader-0 term-4 loglen-6, to raft-2 term-4 prevIdx-6] append len-0
+2021/05/25 21:12:41 leader-0 update raft-2 next from 6 to 6, should be 6
+2021/05/25 21:12:41 leader-1 说 raft-0 缺少太多log，leader的log数量 3， raft的log数量 2
+2021/05/25 21:12:41 leader-0 len7 recv com-104
+2021/05/25 21:12:41 leader-0 heart beating...
+2021/05/25 21:12:41 leader-0 尝试向raft-2 发送消息
+2021/05/25 21:12:41 raft-2 接收到leader-0的信息，cmd 是104
+2021/05/25 21:12:41 raft-2 进行reply
+2021/05/25 21:12:41 [leader-0 term-4 loglen-7, to raft-2 term-4 prevIdx-6] append len-1
+2021/05/25 21:12:41 leader-0 update raft-2 next from 6 to 7, should be 7
+2021/05/25 21:12:41 leader-0 提交成功，commitIdx=6
+2021/05/25 21:12:41 raft-0 msg-102 index-2 apply成功
+2021/05/25 21:12:41 apply error: commit index=2 server=0 102 != server=2 103

@@ -1,0 +1,94 @@
+package raft
+
+import "log"
+
+// 心跳，添加log
+
+type AppendEntriesArgs struct {
+	Term         int
+	LeaderID     int
+	PrevLogIndex int
+	PrevLogTerm  int
+	Entries      []Log
+	LeaderCommit int
+}
+
+type AppendEntriesReply struct {
+	Term    int
+	Success bool
+}
+
+func min(a int, b int) int {
+	if a > b {
+		return a
+	} else {
+		return b
+	}
+}
+
+// AppendEntries handler
+func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply) {
+
+	// reply
+	reply.Term = rf.currentTerm
+	reply.Success = false
+
+	// 不承认 old leader
+	if args.Term < rf.currentTerm {
+		log.Printf("raft-%v term-%v不承认leader-%v term-%v", rf.me, rf.currentTerm, args.LeaderID, args.Term)
+		// 转告old leader最新的term
+		return
+	}
+
+	// 说明新leader的term>自己的term，新leader已经产生，自己应该回退到follower状态
+	if args.Term > rf.currentTerm {
+		rf.currentTerm = args.Term
+		// important! term更大，自己成为follower 并且清空 votedFor
+		rf.becomeFollower(args.Term, NONE)
+	}
+	// 重置倒计时 无论 fellow 还是 candidate 都需要reset
+	rf.resetTimer()
+	// state转变，比如 leader 胜出之后，对其余所有发送心跳包，这个时候可能是 follower 可能是 candidate 收到心跳之后都会转化成 follower
+
+	// 自己缺少的log太多了
+	prevIdx := args.PrevLogIndex
+	if rf.commitIndex < prevIdx {
+		return
+	}
+	// term冲突则删除之后的所有log
+	log.Printf("raft-%v loglen-%v previdx-%v appendlen-%v", rf.me, len(rf.log), prevIdx, len(args.Entries))
+	if rf.log[prevIdx].Term != args.PrevLogTerm {
+		rf.log = rf.log[:prevIdx]
+	}
+	// append
+	if len(args.Entries) > 0 {
+		rf.mu.Lock()
+		prevIdx = args.PrevLogIndex
+		// TODO
+		// apply可以单独放到一个线程中
+		for i, entry := range args.Entries {
+			rf.applyCh <- ApplyMsg{
+				CommandValid: true,
+				Command:      entry.Command,
+				CommandIndex: prevIdx + i + 1,
+			}
+			// log.Printf("send msg : raft-%v msg-%v index-%v",rf.me,entry.Command,prevIdx+1+i)
+		}
+		rf.log = append(rf.log, args.Entries...)
+		rf.mu.Unlock()
+	}
+	// log.Printf("prev %v after %v", prev,len(rf.log))
+	if rf.commitIndex < args.LeaderCommit {
+		rf.commitIndex = min(len(rf.log)-1, args.LeaderCommit)
+	}
+	// log.Printf("raft-%v append %v %v",rf.me,len(args.Entries),len(rf.log))
+	// reply
+	rf.becomeFollower(args.Term, args.LeaderID)
+	reply.Success = true
+}
+
+// RPC
+func (rf *Raft) sendAppendEntries(server int, args *AppendEntriesArgs, reply *AppendEntriesReply) bool {
+	ok := rf.peers[server].Call("Raft.AppendEntries", args, reply)
+	return ok
+}

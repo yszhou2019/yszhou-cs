@@ -1,0 +1,79 @@
+2021/05/23 18:53:54 init 1
+2021/05/23 18:53:54 init 1
+2021/05/23 18:53:54 init 1
+2021/05/23 18:53:54 [follower-0 term-0] become candidate
+2021/05/23 18:53:54 [candidate-0 term-1] win 2 votes, become leader
+2021/05/23 18:53:54 raft-2 loglen-1 previdx-0 appendlen-0
+2021/05/23 18:53:54 raft-1 loglen-1 previdx-0 appendlen-0
+2021/05/23 18:53:54 [leader-0 term-1 loglen-1, to raft-2 term-1 prevIdx-1] 
+2021/05/23 18:53:54 [leader-0 term-1 loglen-1, to raft-1 term-1 prevIdx-1] 
+2021/05/23 18:53:54 leader 0 len2
+2021/05/23 18:53:54 raft-2 loglen-1 previdx-0 appendlen-1
+2021/05/23 18:53:54 raft-1 loglen-1 previdx-0 appendlen-1
+2021/05/23 18:53:54 check cmd-101 success
+2021/05/23 18:53:54 raft-2 loglen-2 previdx-0 appendlen-1
+2021/05/23 18:53:54 raft-1 loglen-2 previdx-0 appendlen-1
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-1] 
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-1] 
+2021/05/23 18:53:54 raft-1 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:54 raft-2 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] 
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] 
+2021/05/23 18:53:54 raft-2 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:54 raft-1 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] 
+2021/05/23 18:53:54 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] 
+2021/05/23 18:53:55 raft-2 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:55 raft-1 loglen-3 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-2, to raft-2 term-1 prevIdx-2] 
+2021/05/23 18:53:55 [leader-0 term-1 loglen-2, to raft-1 term-1 prevIdx-2] 
+2021/05/23 18:53:55 *** disconnect raft-1 ***
+2021/05/23 18:53:55 leader 0 len3
+2021/05/23 18:53:55 raft-2 loglen-3 previdx-1 appendlen-1
+2021/05/23 18:53:55 check cmd-102 success
+2021/05/23 18:53:55 leader 0 len4
+2021/05/23 18:53:55 raft-2 loglen-4 previdx-1 appendlen-2
+2021/05/23 18:53:55 check cmd-103 success
+2021/05/23 18:53:55 raft-2 loglen-6 previdx-1 appendlen-2
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-2] 
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:55 [follower-1 term-1] become candidate
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:55 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:55 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:56 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:56 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:56 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:56 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:56 [candidate-1 term-2] win 1 votes, vote split, start next election
+2021/05/23 18:53:56 raft-2 loglen-8 previdx-0 appendlen-0
+2021/05/23 18:53:56 [leader-0 term-1 loglen-4, to raft-2 term-1 prevIdx-4] 
+2021/05/23 18:53:56 leader 0 len5
+2021/05/23 18:53:56 raft-2 loglen-8 previdx-3 appendlen-1
+2021/05/23 18:53:56 check cmd-104 success
+2021/05/23 18:53:56 leader 0 len6
+2021/05/23 18:53:56 raft-2 loglen-9 previdx-3 appendlen-2
+2021/05/23 18:53:56 check cmd-105 success
+2021/05/23 18:53:56 *** reconnect raft-1 ***
+2021/05/23 18:53:56 leader 0 len7
+2021/05/23 18:53:56 raft-1 status-2 term-3不承认leader-0 term-1
+2021/05/23 18:53:56 raft-2 loglen-11 previdx-3 appendlen-3
+2021/05/23 18:53:56 [candidate-1 term-3] win 1 votes, vote split, start next election
+2021/05/23 18:53:56 leader-0 term-4 转换成 follower term-3
+2021/05/23 18:53:56 [follower-0 term-3] become candidate
+2021/05/23 18:53:57 [candidate-1 term-4] win 1 votes, vote split, start next election
+2021/05/23 18:53:57 [candidate-0 term-5] win 1 votes, become follower
+2021/05/23 18:53:57 [candidate-1 term-5] win 1 votes, vote split, start next election
+2021/05/23 18:53:58 [follower-2 term-6] become candidate
+2021/05/23 18:53:58 [candidate-2 term-7] win 2 votes, become leader
+2021/05/23 18:53:58 raft-1 loglen-3 previdx-0 appendlen-13
+2021/05/23 18:53:58 apply error: commit index=2 server=1 101 != server=2 102
+2021/05/23 18:53:58 raft-0 loglen-7 previdx-0 appendlen-13

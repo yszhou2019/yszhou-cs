@@ -1,0 +1,77 @@
+package raft
+
+type RequestVoteArgs struct {
+	// Your data here (2A, 2B).
+	Term         int // 候选者的term
+	CandidateID  int // 候选者的id
+	LastLogIndex int // 候选者的资格审核
+	LastLogTerm  int
+}
+
+type RequestVoteReply struct {
+	// Your data here (2A).
+	Term        int  // 尝试更新候选者的term
+	VoteGranted bool // 是否给与投票
+}
+
+// RequestVote RPC handler.
+func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
+	// Your code here (2A, 2B).
+
+	// candidate不会 reset倒计时
+	if rf.status == follower {
+		rf.resetTimer()
+	}
+	// reply
+	reply.VoteGranted = false
+	reply.Term = rf.currentTerm
+
+	// leader资格不够
+	if rf.currentTerm > args.Term {
+		return
+	}
+
+	// follower清理掉votedFor
+	if rf.currentTerm < args.Term {
+		rf.becomeFollower(args.Term, NONE)
+	}
+
+	lastIdx := len(rf.log) - 1
+	lastTerm := rf.log[lastIdx].Term
+	if lastTerm < args.LastLogTerm || (lastTerm == args.LastLogTerm && lastIdx <= args.LastLogIndex) {
+		if rf.votedFor == NONE || rf.votedFor == args.CandidateID {
+			// 审核资格通过 并且自己没有投票
+			reply.VoteGranted = true
+			rf.becomeFollower(args.Term, args.CandidateID)
+		}
+	}
+
+	// 自己的term<=candidate的term
+	// 即使相等，也可能需要投票
+	// 即使<，也可能不投票（没资格）
+	// 错，即使term相同，也有可能需要投票（上次candidate没有资格）
+
+	// // 自己term<新一届term，这个时候如果自己有票则投第一票，投过则不再投票
+	// // TODO 这里有问题
+	// rf.currentTerm = args.Term
+	// reply.Term = args.Term
+	//
+	// // term>自己的term，说明是新一届，审核资格之后就可以投票
+	// // if args.LastLogIndex>=rf.commitIndex{
+	// // && lastlogterm
+	// // NIL
+	// // log和自己的一样新，并且自己没有投过票，才能投票
+	// // 如果自己有票 才能投票
+	// rf.votedFor = args.CandidateID
+	// reply.VoteGranted = true
+	// // }
+	// // 数据不如自己的新，拒绝投票
+
+}
+
+// 参数server代表目标target的idx
+// rpc如果不超时，那么call返回true，否则返回false
+func (rf *Raft) sendRequestVote(server int, args *RequestVoteArgs, reply *RequestVoteReply) bool {
+	ok := rf.peers[server].Call("Raft.RequestVote", args, reply)
+	return ok
+}

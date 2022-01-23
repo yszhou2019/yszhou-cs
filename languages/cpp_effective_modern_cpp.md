@@ -1,0 +1,1 @@
+https://zsmj2017.tech/categories/Effective-Modern-C/
